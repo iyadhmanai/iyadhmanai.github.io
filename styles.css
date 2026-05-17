@@ -389,9 +389,29 @@ h3 {
   font-weight: 750;
 }
 
-.placeholder {
+.in-progress {
   display: flex;
   align-items: flex-end;
+}
+
+.status-label {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(165, 79, 42, 0.28);
+  padding: 4px 9px;
+  background: rgba(217, 155, 53, 0.16);
+  color: var(--rust);
+  font-weight: 850;
+}
+
+.status-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--rust);
+  border-radius: 50%;
 }
 
 .split-section {
