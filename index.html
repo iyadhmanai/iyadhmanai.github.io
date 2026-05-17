@@ -41,12 +41,14 @@
         </div>
 
         <aside class="profile-panel" aria-label="Profile summary">
-          <div class="profile-visual" aria-hidden="true">
-            <div class="signal-grid">
-              <span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span>
-            </div>
+          <div class="profile-visual">
+            <img
+              class="profile-photo"
+              src="assets/iyadh-manai-profile.jpg"
+              alt="Portrait of Iyadh Manai"
+              onerror="this.hidden=true; this.parentElement.classList.add('missing-photo')"
+            >
+            <div class="photo-fallback" aria-hidden="true">IM</div>
           </div>
           <div class="profile-facts">
             <div>
@@ -59,7 +61,7 @@
             </div>
             <div>
               <span class="fact-label">Education</span>
-              <strong>B.Sc. Information Systems, TUM</strong>
+              <strong>B.Sc. Information Systems, TUM, Oct 2022 - May 2026</strong>
             </div>
           </div>
         </aside>
@@ -171,9 +173,10 @@
           <h2>Technical University of Munich.</h2>
         </div>
         <div class="education-card">
-          <div>
+          <div class="education-title">
+            <img class="tum-logo" src="assets/tum-logo.svg" alt="Technical University of Munich logo">
             <h3>Bachelor of Science in Information Systems</h3>
-            <p>2023 - 2026 / Munich, Germany</p>
+            <p>October 2022 - May 2026 / Munich, Germany</p>
           </div>
           <p>
             Degree combining business administration, information systems, and software engineering,
