@@ -12,4 +12,4 @@ python3 -m http.server 8000
 
 The CV download is stored at `assets/Iyadh_Manai_CV_EN.pdf`.
 
-Add the profile photo as `assets/iyadh-manai-profile.jpg`.
+The profile photo is stored at `IyadhManai.png`.
