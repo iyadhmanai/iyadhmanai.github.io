@@ -389,6 +389,18 @@ h3 {
   font-weight: 750;
 }
 
+.project-link {
+  display: inline-flex;
+  margin-top: 24px;
+  border-bottom: 2px solid var(--rust);
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.project-link:hover {
+  color: var(--rust);
+}
+
 .in-progress {
   display: flex;
   align-items: flex-end;
