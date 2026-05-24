@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" role="img" aria-labelledby="title desc">
+  <title id="title">Luma Bank logo</title>
+  <desc id="desc">A modern fintech logo using European Union blue and yellow for Luma Bank.</desc>
+  <defs>
+    <linearGradient id="lumaGlow" x1="68" y1="52" x2="166" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffcc00"/>
+      <stop offset="1" stop-color="#fff4a8"/>
+    </linearGradient>
+    <linearGradient id="lumaPanel" x1="32" y1="20" x2="216" y2="196" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0046b8"/>
+      <stop offset="1" stop-color="#003399"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="220" fill="#fffaf1"/>
+  <rect x="28" y="26" width="164" height="164" rx="24" fill="url(#lumaPanel)"/>
+  <g fill="#ffcc00">
+    <circle cx="82" cy="58" r="3.5"/>
+    <circle cx="113" cy="48" r="3.5"/>
+    <circle cx="144" cy="58" r="3.5"/>
+    <circle cx="162" cy="86" r="3.5"/>
+    <circle cx="162" cy="122" r="3.5"/>
+    <circle cx="144" cy="150" r="3.5"/>
+    <circle cx="113" cy="160" r="3.5"/>
+    <circle cx="82" cy="150" r="3.5"/>
+    <circle cx="64" cy="122" r="3.5"/>
+    <circle cx="64" cy="86" r="3.5"/>
+  </g>
+  <path d="M78 66v78h60" fill="none" stroke="url(#lumaGlow)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 138c28-2 52-14 72-38" fill="none" stroke="#fffaf1" stroke-width="8" stroke-linecap="round" opacity="0.74"/>
+  <circle cx="151" cy="79" r="10" fill="#ffcc00"/>
+  <text x="220" y="100" fill="#003399" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Luma</text>
+  <text x="220" y="140" fill="#5d696d" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700">Bank</text>
+  <path d="M222 158h132" stroke="#ffcc00" stroke-width="5" stroke-linecap="round"/>
+</svg>

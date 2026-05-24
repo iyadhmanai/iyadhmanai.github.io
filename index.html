@@ -26,6 +26,7 @@
 
     <main id="top">
       <section class="hero">
+        <div class="hero-grid-motion" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow">Information Systems / Technical Delivery</p>
           <h1>Building dependable software at the meeting point of business and engineering.</h1>
@@ -34,6 +35,17 @@
             experience in agile quality assurance, automated testing, release preparation, and translating
             requirements into delivery-ready software work.
           </p>
+          <div class="hero-chips" aria-label="Professional focus">
+            <span>Bachelor graduate</span>
+            <span>Technical delivery</span>
+            <span>QA automation</span>
+            <span>Project management</span>
+          </div>
+          <div class="delivery-flow" aria-label="Delivery workflow">
+            <span>Requirements</span>
+            <span>Roadmap</span>
+            <span>Delivery</span>
+          </div>
           <div class="hero-actions" aria-label="Main actions">
             <a class="button primary" href="#projects">View projects</a>
             <a class="button secondary" href="assets/Iyadh_Manai_CV_EN.pdf">Download CV</a>
@@ -100,25 +112,34 @@
         </div>
         <div class="projects-grid">
           <article class="project-card featured">
-            <div class="project-media" aria-hidden="true">
-              <div class="board">
-                <span class="chip"></span>
-                <span class="trace trace-a"></span>
-                <span class="trace trace-b"></span>
-                <span class="trace trace-c"></span>
-                <span class="node node-a"></span>
-                <span class="node node-b"></span>
-                <span class="node node-c"></span>
-              </div>
+            <div class="project-media">
+              <img
+                class="project-visual"
+                src="assets/embedded-systems-digiproces.jpg"
+                alt="Embedded systems circuit board photo"
+              >
             </div>
             <div class="project-body">
-              <p class="project-type">Bachelor thesis / Grade 1.0</p>
+              <div class="project-kicker">
+                <p class="project-type">Bachelor thesis / Grade 1.0</p>
+                <span>Embedded systems</span>
+              </div>
               <h3>Embedded internet radio for network-based audio streaming</h3>
               <p>
                 Designed and implemented an embedded internet radio in C on the STM32F769I-Discovery
                 board, including secure HTTPS streaming, network setup, redirect handling, reconnect
                 logic, and a web-based status page.
               </p>
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Design and implementation</dd>
+                </div>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Secure streaming and network reliability</dd>
+                </div>
+              </dl>
               <div class="tag-row" aria-label="Technologies">
                 <span>C</span>
                 <span>STM32</span>
@@ -129,8 +150,13 @@
             </div>
           </article>
 
-          <article class="project-card in-progress">
+          <article class="project-card in-progress dealna-card">
             <div class="project-body">
+              <img
+                class="project-logo dealna-logo"
+                src="assets/dealna-logo.svg"
+                alt="Dealna logo"
+              >
               <p class="project-type status-label">In progress</p>
               <h3>Dealna</h3>
               <p>
@@ -138,6 +164,16 @@
                 project management case study with functional requirements, roadmap, estimates,
                 stakeholder planning, risk tracking, and an MVP voucher redemption lifecycle.
               </p>
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Technical PM case study</dd>
+                </div>
+                <div>
+                  <dt>Scope</dt>
+                  <dd>Marketplace MVP planning</dd>
+                </div>
+              </dl>
               <div class="tag-row" aria-label="Project focus areas">
                 <span>Technical PM</span>
                 <span>Requirements</span>
@@ -155,6 +191,44 @@
               </a>
             </div>
           </article>
+
+          <article class="project-card in-progress luma-card">
+            <div class="project-body">
+              <img class="project-logo" src="assets/luma-bank-logo.svg" alt="Luma Bank logo">
+              <p class="project-type status-label">In progress</p>
+              <h3>Luma Bank</h3>
+              <p>
+                Euro-based digital banking and investment platform for retail clients, currently
+                focused on project foundation, scalable TypeScript architecture, transaction
+                analytics, investment catalogue design, and EU compliance-aware delivery planning.
+              </p>
+              <dl class="project-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Architecture and delivery foundation</dd>
+                </div>
+                <div>
+                  <dt>Scope</dt>
+                  <dd>Banking and investment MVP</dd>
+                </div>
+              </dl>
+              <div class="tag-row" aria-label="Technologies and focus areas">
+                <span>Next.js</span>
+                <span>NestJS</span>
+                <span>PostgreSQL</span>
+                <span>TypeScript</span>
+                <span>Fintech</span>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/iyadhmanai/LumaBank"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub repo
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -163,22 +237,89 @@
           <p class="eyebrow">Capabilities</p>
           <h2>Business context, delivery discipline, and engineering fluency.</h2>
         </div>
-        <div class="skills-grid">
-          <article>
+        <div class="skills-tabs">
+          <input type="radio" name="skill-tab" id="skill-pm" checked>
+          <input type="radio" name="skill-tab" id="skill-qa">
+          <input type="radio" name="skill-tab" id="skill-engineering">
+          <input type="radio" name="skill-tab" id="skill-analysis">
+          <div class="tab-controls" role="tablist" aria-label="Capability areas">
+            <label for="skill-pm" role="tab">Technical PM</label>
+            <label for="skill-qa" role="tab">QA & Testing</label>
+            <label for="skill-engineering" role="tab">Engineering</label>
+            <label for="skill-analysis" role="tab">Analysis</label>
+          </div>
+          <article class="skill-panel panel-pm">
+            <h3>Technical project management</h3>
+            <p>Requirements engineering, roadmap planning, backlog shaping, stakeholder communication, prioritization, delivery coordination, and structured documentation.</p>
+            <div class="skill-pills">
+              <span>Jira</span>
+              <span>Confluence</span>
+              <span>RACI</span>
+              <span>Risk register</span>
+              <span>MoSCoW</span>
+            </div>
+          </article>
+          <article class="skill-panel panel-qa">
+            <h3>QA and test delivery</h3>
+            <p>Acceptance criteria analysis, regression coverage, defect reproduction, CI/CD test environments, automated checks, and release readiness support.</p>
+            <div class="skill-pills">
+              <span>Selenium</span>
+              <span>Cypress</span>
+              <span>Regression tests</span>
+              <span>Defect tracking</span>
+              <span>CI/CD</span>
+            </div>
+          </article>
+          <article class="skill-panel panel-engineering">
+            <h3>Engineering fluency</h3>
+            <p>Java, Python, C, C++, Spring Boot, TypeScript foundations, database systems, networks, distributed systems, and embedded systems.</p>
+            <div class="skill-pills">
+              <span>Java</span>
+              <span>Python</span>
+              <span>C/C++</span>
+              <span>Spring Boot</span>
+              <span>PostgreSQL</span>
+            </div>
+          </article>
+          <article class="skill-panel panel-analysis">
             <h3>Consulting & analysis</h3>
-            <p>Information systems analysis, business process modeling, requirements engineering, acceptance criteria, and business-technical translation.</p>
+            <p>Business process modeling, information systems analysis, business analytics, quantitative analysis, operations research, econometrics, and research methods.</p>
+            <div class="skill-pills">
+              <span>Process modeling</span>
+              <span>Business analytics</span>
+              <span>Data analysis</span>
+              <span>Econometrics</span>
+              <span>Research</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section delivery-section">
+        <div class="section-heading">
+          <p class="eyebrow">Delivery Story</p>
+          <h2>From academic systems work to product-minded delivery.</h2>
+        </div>
+        <div class="delivery-timeline">
+          <article>
+            <span>Oct 2022</span>
+            <h3>TUM Information Systems</h3>
+            <p>Built the business and engineering foundation across requirements, data, software, and process work.</p>
           </article>
           <article>
-            <h3>Project delivery</h3>
-            <p>Agile ways of working, Scrum, Jira, Confluence, issue tracking, stakeholder communication, prioritization, and test coordination.</p>
+            <span>2023</span>
+            <h3>Cleversoft QA role</h3>
+            <p>Moved close to agile software delivery, test automation, CI/CD environments, and release readiness.</p>
           </article>
           <article>
-            <h3>Engineering</h3>
-            <p>Java, Python, C, C++, Spring Boot, Selenium, Cypress, CI/CD, debugging, database systems, networks, and embedded systems.</p>
+            <span>2026</span>
+            <h3>Embedded thesis</h3>
+            <p>Delivered a network-based audio streaming system with secure HTTPS handling and reconnect logic.</p>
           </article>
           <article>
-            <h3>Analysis</h3>
-            <p>Data analysis, business analytics, quantitative analysis, operations research, econometrics, statistical thinking, and research methods.</p>
+            <span>Now</span>
+            <h3>Portfolio products</h3>
+            <p>Documenting and building Dealna and Luma Bank as project management and technical delivery case studies.</p>
           </article>
         </div>
       </section>
@@ -199,6 +340,35 @@
             with coursework in process modeling, requirements engineering, data management, business
             analytics, software engineering, database systems, and project work.
           </p>
+        </div>
+      </section>
+
+      <section class="section process-section">
+        <div class="section-heading">
+          <p class="eyebrow">How I Work</p>
+          <h2>Clear structure from first requirement to delivered increment.</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Clarify</h3>
+            <p>Translate business goals into requirements, constraints, acceptance criteria, and delivery assumptions.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Structure</h3>
+            <p>Shape scope into milestones, dependencies, risks, priorities, and a backlog that teams can execute.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Coordinate</h3>
+            <p>Keep stakeholders, developers, QA, and documentation aligned around decisions and delivery status.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Validate</h3>
+            <p>Use test coverage, defect analysis, demos, and feedback loops to check that the increment is ready.</p>
+          </article>
         </div>
       </section>
 
