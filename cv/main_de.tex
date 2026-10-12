@@ -1,0 +1,151 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\geometry{
+  top=0.75cm,
+  bottom=0.75cm,
+  left=0.95cm,
+  right=0.95cm
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxrule}{0.55pt}
+\setlength{\fboxsep}{4pt}
+\renewcommand{\familydefault}{\rmdefault}
+
+\newsavebox{\cvsectionbox}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{6pt}%
+  \noindent\hspace{1.1em}\colorbox{white}{\bfseries\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+}
+
+\newenvironment{cvsection}[1]{%
+  \Needspace{5\baselineskip}%
+  \sectiontitle{#1}%
+  \begin{lrbox}{\cvsectionbox}%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule-4pt\relax}%
+    \vspace{2pt}
+}{%
+    \vspace{2pt}
+    \end{minipage}%
+  \end{lrbox}%
+  \noindent\fbox{\usebox{\cvsectionbox}}%
+  \par
+}
+
+\newcommand{\datedentry}[4]{%
+  \begin{tabular*}{\linewidth}{@{}p{0.26\linewidth}@{\extracolsep{\fill}}p{0.68\linewidth}@{}}
+    #1 & \textbf{#2} \\
+    #3 & \textbf{#4}
+  \end{tabular*}
+}
+
+\newcommand{\roleentry}[4]{%
+  \begin{tabular*}{\linewidth}{@{}p{0.26\linewidth}@{\extracolsep{\fill}}p{0.68\linewidth}@{}}
+    #1 & \textbf{#2} \\
+    #3 & \textbf{#4}
+  \end{tabular*}
+}
+
+\newcommand{\educationitem}[3]{%
+  \textbf{#1 | #2}\par
+  #3\par
+}
+
+\begin{document}
+\fontsize{7.45}{8.65}\selectfont
+
+\noindent\fbox{%
+  \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule-4pt\relax}
+    {\Large\textbf{Iyadh Manai}}\par
+    \vspace{2pt}
+    München, Bayern, Deutschland \textbullet{} Geburtsdatum: 17.08.1999 \textbullet{} +49 176 76094155\par
+    iyadh.manai1@gmail.com
+  \end{minipage}
+}
+
+\begin{cvsection}{Zusammenfassung}
+Bachelorabsolvent der Wirtschaftsinformatik und Masterstudent in Information Systems an der Technischen Universität München mit Erfahrung in agiler Softwareentwicklung, Qualitätssicherung, Testautomatisierung und technischen Lieferprozessen. Profil an der Schnittstelle von Business und IT: Anforderungen verstehen, Prozesse strukturieren, technische Themen verständlich kommunizieren und qualitätsorientierte Lösungen umsetzen. Ab 15.10.2026 Tätigkeit bei Allianz Markt und Kunde im Bereich Operations \& Processes. Fokus auf IT-Consulting, IT-Projektmanagement, Business Analysis und digitale Transformation.
+\end{cvsection}
+
+\begin{cvsection}{Berufserfahrung}
+\roleentry{Ab 15.10.2026}{Werkstudent -- Operations \& Processes}{Deutschland}{Allianz Markt und Kunde}
+Bevorstehende Tätigkeit; bestätigter Eintrittstermin: 15. Oktober 2026.
+
+\vspace{4pt}
+\roleentry{2023 -- Heute}{Werkstudent Qualitätssicherung / QA}{München, Deutschland}{Cleversoft Group GmbH}
+
+\begin{itemize}[leftmargin=1.0em,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt]
+  \item Qualitätssicherung von Softwarelösungen in agilem Scrum-Umfeld mit Nähe zu Entwicklung, Testing und Release-Vorbereitung.
+  \item Erstellung, Pflege und Ausführung automatisierter Testfälle mit Selenium, Cypress, Playwright und JMeter für funktionale Anforderungen und Regressionstests.
+  \item Analyse von Anforderungen und Akzeptanzkriterien aus fachlicher und technischer Perspektive zur Verbesserung von Testabdeckung und Lieferfähigkeit.
+  \item Vorbereitung von CI/CD-Testumgebungen durch Konfiguration von Datenimportern, Testdaten und Deployment-Jobs.
+  \item Strukturierte Fehleranalyse, Reproduktion von Defekten, Dokumentation von Findings sowie Issue Tracking in Jira.
+  \item Dokumentation von Testergebnissen und technischen Abläufen in Confluence; Zusammenarbeit mit Entwicklern und fachlichen Stakeholdern.
+\end{itemize}
+\end{cvsection}
+
+\begin{cvsection}{Ausbildung und Studium}
+\educationitem{10/2026--Heute}{Masterstudium Information Systems}{Technische Universität München, München}
+Studienbeginn: 01.10.2026; Studium laufend.
+
+\vspace{2pt}
+\educationitem{10/2022--05/2026}{Bachelor of Science Wirtschaftsinformatik}{Technische Universität München, München}
+Relevante Inhalte: Software Engineering, Requirements Engineering, Informationssystemanalyse, Geschäftsprozessmodellierung, Datenmanagement, Business Analytics und Datenbanksysteme.
+
+\vspace{2pt}
+\educationitem{01/2026--04/2026}{Bachelorarbeit: Embedded System Design for Network-Based Audio Streaming and Playback}{Technische Universität München}
+Abschlussnote: 1,0
+
+\vspace{2pt}
+\educationitem{10/2020--09/2022}{Studium der Informatik, ohne Abschluss}{Technische Universität München, München}
+Anschließender Fachwechsel in den Studiengang Wirtschaftsinformatik.
+
+\vspace{2pt}
+\educationitem{03/2020--09/2020}{Studienvorbereitung und Hochschulbewerbung}{Deutschland}
+Vorbereitung auf die Aufnahme eines Informatikstudiums an der Technischen Universität München.
+
+\vspace{2pt}
+\educationitem{10/2019--02/2020}{Deutsch-Intensivkurs, Niveau C1}{Carl Duisberg Centrum, Berlin}
+Erwerb der Hochschulzugangsberechtigung durch die bestandene DSH-Prüfung, Ergebnis: DSH-2, Hochschule München.
+
+\vspace{2pt}
+\educationitem{10/2018--09/2019}{Deutsch-Intensivkurs}{Educaro, Sousse, Tunesien}
+Vorbereitung auf Studium und Hochschulzugang in Deutschland.
+
+\vspace{2pt}
+\educationitem{09/2014--06/2018}{Sekundarschulbildung}{Elitegymnasium, Sousse, Tunesien}
+Abschluss: Baccalauréat de l'Enseignement Secondaire, Section Mathématiques. Entspricht der allgemeinen Hochschulreife, Schwerpunkt Mathematik. Abschlussnote: 2,1 nach deutscher Notenumrechnung.
+\end{cvsection}
+
+\begin{cvsection}{Kompetenzen}
+\textbf{IT-Consulting und Business Analysis:} Informationssystemanalyse, Geschäftsprozessmodellierung, Requirements Engineering, Akzeptanzkriterien, fachlich-technische Übersetzung, Prozessverbesserung.
+
+\vspace{2pt}
+\textbf{IT-Projektmanagement:} Agile Arbeitsweise, Scrum, Jira, Confluence, strukturierte Dokumentation, Issue Tracking, Stakeholder-Kommunikation, Priorisierung, Liefer- und Testkoordination.
+
+\vspace{2pt}
+\textbf{Technisch:} Java, Python, C, C++, Selenium, Cypress, Playwright, JMeter, Spring Boot, CI/CD, Testautomatisierung, Debugging, Software Engineering, Datenbanksysteme, Rechnernetze, verteilte Systeme, Embedded Systems.
+
+\vspace{2pt}
+\textbf{Analytisch und methodisch:} Datenanalyse, Business Analytics, quantitative Analyse, Operations Research, Ökonometrie, statistisches Denken, Problemlösung, Forschungsmethoden.
+
+\vspace{2pt}
+\textbf{Professionell:} Cross-funktionale Kommunikation, Präsentationsfähigkeit, Teamarbeit, interdisziplinäre Zusammenarbeit, eigenständige Einarbeitung, strukturierte Arbeitsweise.
+\end{cvsection}
+
+\begin{cvsection}{Sprachkenntnisse}
+\textbf{Arabisch:} Muttersprache; \textbf{Deutsch:} Verhandlungssicher; \textbf{Englisch:} Verhandlungssicher; \textbf{Französisch:} Verhandlungssicher
+\end{cvsection}
+
+\end{document}

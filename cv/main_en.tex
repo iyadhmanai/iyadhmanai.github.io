@@ -1,0 +1,151 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{needspace}
+
+\geometry{
+  top=0.75cm,
+  bottom=0.75cm,
+  left=0.95cm,
+  right=0.95cm
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\fboxrule}{0.55pt}
+\setlength{\fboxsep}{4pt}
+\renewcommand{\familydefault}{\rmdefault}
+
+\newsavebox{\cvsectionbox}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{6pt}%
+  \noindent\hspace{1.1em}\colorbox{white}{\bfseries\MakeUppercase{#1}}\par
+  \vspace{1pt}%
+}
+
+\newenvironment{cvsection}[1]{%
+  \Needspace{5\baselineskip}%
+  \sectiontitle{#1}%
+  \begin{lrbox}{\cvsectionbox}%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule-4pt\relax}%
+    \vspace{2pt}
+}{%
+    \vspace{2pt}
+    \end{minipage}%
+  \end{lrbox}%
+  \noindent\fbox{\usebox{\cvsectionbox}}%
+  \par
+}
+
+\newcommand{\datedentry}[4]{%
+  \begin{tabular*}{\linewidth}{@{}p{0.26\linewidth}@{\extracolsep{\fill}}p{0.68\linewidth}@{}}
+    #1 & \textbf{#2} \\
+    #3 & \textbf{#4}
+  \end{tabular*}
+}
+
+\newcommand{\roleentry}[4]{%
+  \begin{tabular*}{\linewidth}{@{}p{0.26\linewidth}@{\extracolsep{\fill}}p{0.68\linewidth}@{}}
+    #1 & \textbf{#2} \\
+    #3 & \textbf{#4}
+  \end{tabular*}
+}
+
+\newcommand{\educationitem}[3]{%
+  \textbf{#1 | #2}\par
+  #3\par
+}
+
+\begin{document}
+\fontsize{7.45}{8.65}\selectfont
+
+\noindent\fbox{%
+  \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule-4pt\relax}
+    {\Large\textbf{Iyadh Manai}}\par
+    \vspace{2pt}
+    Munich, Bavaria, Germany \textbullet{} Date of birth: 17/08/1999 \textbullet{} +49 176 76094155\par
+    iyadh.manai1@gmail.com
+  \end{minipage}
+}
+
+\begin{cvsection}{Summary}
+Information Systems bachelor's graduate and master's student at the Technical University of Munich with experience in agile software development, quality assurance, test automation, and technical delivery processes. Business-IT bridge profile: able to understand requirements, structure processes, communicate technical topics clearly, and support quality-oriented solution delivery. Joining Allianz Markt und Kunde in Operations \& Processes on 15 October 2026. Focused on IT consulting, IT project management, business analysis, and digital transformation.
+\end{cvsection}
+
+\begin{cvsection}{Professional Experience}
+\roleentry{From 15/10/2026}{Working Student -- Operations \& Processes}{Germany}{Allianz Markt und Kunde}
+Upcoming role; start date confirmed for 15 October 2026.
+
+\vspace{4pt}
+\roleentry{2023 -- Present}{Working Student Quality Assurance / QA}{Munich, Germany}{Cleversoft Group GmbH}
+
+\begin{itemize}[leftmargin=1.0em,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt]
+  \item Quality assurance for software solutions in an agile Scrum environment close to development, testing, and release preparation.
+  \item Create, maintain, and execute automated test cases with Selenium, Cypress, Playwright, and JMeter for functional requirements and regression coverage.
+  \item Analyze requirements and acceptance criteria from business and technical perspectives to improve test coverage and delivery readiness.
+  \item Prepare CI/CD test environments by configuring data importers, test data, and deployment jobs.
+  \item Perform structured defect analysis, reproduce issues, document findings, and track issues in Jira.
+  \item Document test results and technical workflows in Confluence; collaborate with developers and business stakeholders.
+\end{itemize}
+\end{cvsection}
+
+\begin{cvsection}{Education and Studies}
+\educationitem{10/2026--Present}{Master's Program in Information Systems}{Technical University of Munich, Munich}
+Started 1 October 2026; studies ongoing.
+
+\vspace{2pt}
+\educationitem{10/2022--05/2026}{Bachelor of Science in Information Systems}{Technical University of Munich, Munich}
+Relevant topics: software engineering, requirements engineering, information systems analysis, business process modeling, data management, business analytics, and database systems.
+
+\vspace{2pt}
+\educationitem{01/2026--04/2026}{Bachelor's Thesis: Embedded System Design for Network-Based Audio Streaming and Playback}{Technical University of Munich}
+Final grade: 1.0
+
+\vspace{2pt}
+\educationitem{10/2020--09/2022}{Studies in Computer Science, no degree}{Technical University of Munich, Munich}
+Subsequent change of subject to Information Systems.
+
+\vspace{2pt}
+\educationitem{03/2020--09/2020}{Study preparation and university application}{Germany}
+Preparation for admission to the Computer Science program at the Technical University of Munich.
+
+\vspace{2pt}
+\educationitem{10/2019--02/2020}{Intensive German course, C1 level}{Carl Duisberg Centrum, Berlin}
+University entrance qualification obtained through the passed DSH examination, result: DSH-2, Munich University of Applied Sciences.
+
+\vspace{2pt}
+\educationitem{10/2018--09/2019}{Intensive German course}{Educaro, Sousse, Tunisia}
+Preparation for studies and university admission in Germany.
+
+\vspace{2pt}
+\educationitem{09/2014--06/2018}{Secondary school education}{Elite Gymnasium, Sousse, Tunisia}
+Degree: Baccalauréat de l'Enseignement Secondaire, Mathematics section. Equivalent to the German general higher education entrance qualification, focus on mathematics. Final grade: 2.1 according to German grade conversion.
+\end{cvsection}
+
+\begin{cvsection}{Skills}
+\textbf{IT Consulting and Business Analysis:} Information systems analysis, business process modeling, requirements engineering, acceptance criteria, business-technical translation, process improvement.
+
+\vspace{2pt}
+\textbf{IT Project Management:} Agile ways of working, Scrum, Jira, Confluence, structured documentation, issue tracking, stakeholder communication, prioritization, delivery and test coordination.
+
+\vspace{2pt}
+\textbf{Technical:} Java, Python, C, C++, Selenium, Cypress, Playwright, JMeter, Spring Boot, CI/CD, test automation, debugging, software engineering, database systems, computer networks, distributed systems, embedded systems.
+
+\vspace{2pt}
+\textbf{Analytical and Methodological:} Data analysis, business analytics, quantitative analysis, operations research, econometrics, statistical thinking, problem solving, research methods.
+
+\vspace{2pt}
+\textbf{Professional:} Cross-functional communication, presentation skills, teamwork, interdisciplinary collaboration, independent learning, structured working style.
+\end{cvsection}
+
+\begin{cvsection}{Languages}
+\textbf{Arabic:} Native; \textbf{German:} Professional working proficiency; \textbf{English:} Professional working proficiency; \textbf{French:} Professional working proficiency
+\end{cvsection}
+
+\end{document}
